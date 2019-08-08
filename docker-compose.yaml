@@ -1,0 +1,27 @@
+version: '2'
+services:
+
+  # The Client Application
+
+  client:
+    container_name: client-base
+    build:
+      context: ./docker/
+      dockerfile: client.dockerfile
+    working_dir: /var/www/html
+    volumes:
+      - ./client/:/var/www/html
+    tty: true
+
+  # The Client Web Server
+  web_client:
+    container_name: web_client-base
+    build:
+      context: ./docker/
+      dockerfile: web-client.dockerfile
+    working_dir: /var/www/html
+    volumes_from:
+      - client
+    ports:
+      - 8080:80
+    tty: true

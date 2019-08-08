@@ -1,0 +1,3 @@
+# ignore todos os arquivos dos diretórios abaixo
+client/node_modules/
+client/dist/
