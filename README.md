@@ -10,7 +10,7 @@ O que você encontra aqui:
 * Faça o clone do projeto:
 
 ```bash
-    git clone git@github.com:GieandesSilva/cliente-locaweb.git [nome-do-projeto]
+    git clone https://github.com/GieandesSilva/client-locaweb.git [nome-do-projeto]
 ```
 
 * Entre na pasta [nome-do-projeto] e rode:
@@ -28,7 +28,7 @@ O que você encontra aqui:
 * Acesse o container do aplicativo para instalar as dependências:
 
 ```bash
-    docker exec -ti cliente-base sh
+    docker exec -ti client-base sh
 ```
     
 * Dentro do container execute os comandos:
