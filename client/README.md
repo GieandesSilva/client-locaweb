@@ -1,29 +1,65 @@
-# Client Locaweb
+## CLIENTE LOCAWEB
 
-## Project setup
-```
-npm install
-```
+O que você encontra aqui:
+    
+    * web-base   - Um serviço com ALPINE + NGINX
+    * app-base   - Um serviço com ALPINE + VueJs
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Instalação
 
-### Compiles and minifies for production
-```
-npm run build
+* Faça o clone do projeto:
+
+```bash
+    git clone git@github.com:GieandesSilva/cliente-locaweb.git [nome-do-projeto]
 ```
 
-### Run your tests
-```
-npm run test
+* Entre na pasta [nome-do-projeto] e rode:
+
+```bash
+    docker-compose up -d
 ```
 
-### Lints and fixes files
-```
-npm run lint
+* Verifique se os containers estão de pé [opcional]:
+
+```bash
+    docker ps
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Acesse o container do aplicativo para instalar as dependências:
+
+```bash
+    docker exec -ti cliente-base sh
+```
+    
+* Dentro do container execute os comandos:
+    
+```bash
+    * Instale as dependências com npm:
+    
+        npm install
+
+    * Faça uma cópia do .env.example:
+
+        cp .env.example .env
+
+    * Altere as permissões do .env:
+    
+        chgrp node .env && chown node .env
+
+    * Gere o buil do projeto com o comando:
+    
+        npm run build
+
+```
+
+* Verifique o seu projeto rodando no link:
+
+```bash
+    http://localhost:8080/
+```
+            
+## :D
+Obrigado por acompanhar os passos e espero ter ajudado.
+
+## Nós
+[Gieandes Silva](http://gieandessilva.com)
