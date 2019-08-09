@@ -46,7 +46,13 @@ O que você encontra aqui:
     
         chgrp node .env && chown node .env
 
-    * Gere o buil do projeto com o comando:
+    * No env, altere as variáveis com os valores recebidos da authenticação da api
+
+        Exemplo: 
+        VUE_APP_API_CLIENT_ID="2"
+        VUE_APP_API_CLIENT_SECRET= "tHrtmPttcx1iTJV1XxQTnJbLQLvRdqkLaVlqwjDA"
+
+    * Gere o build do projeto com o comando:
     
         npm run build
 
